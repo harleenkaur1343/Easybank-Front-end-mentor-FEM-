@@ -79,6 +79,7 @@
         height:max-content;
         box-shadow: 0 20px 20px 0px #2c2c2c52;
         transition:width .3s ease;
+        display:none;
     }
     .navitem-small{
         display:block;
@@ -933,6 +934,7 @@
                 }
                 else{
                     navsmcont.className="nav-small-cont";
+                    navsmcont.style.display='block';
                     navsmcont.style.width='40%';
                 }
                // navbar.className="w3-hide";
@@ -949,6 +951,7 @@
              else if(navsmcont.className==='nav-small-cont close' || navsmcont.className==='nav-small-cont nav-small-cont-mb close')
              {
                 navsmcont.style.width='0%';
+                navsmcont.style.display:'none';
                 //navbar.className="w3-show";
                 navbar.style.opacity='1';
                 navbar.style.height='auto';

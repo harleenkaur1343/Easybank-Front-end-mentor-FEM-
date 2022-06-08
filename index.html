@@ -80,7 +80,7 @@
         transition:width .3s ease;
     }
     .navitem-small{
-        display:block;
+        display:none;
         width:100%;
         padding:20px;
         margin:0px;
@@ -168,7 +168,7 @@
         top:-17em;
         left:-3em;
         z-index:-4;
-        overflow:hidden;
+        overflow: hidden;
     }
     picture>source.header-imbg-mobile{
         width:100%;
@@ -355,6 +355,10 @@
 
     .w3-half{
             width:35%;
+    }
+
+    .displaymod{
+      display: block;
     }
 
 
@@ -925,6 +929,7 @@
         overslay=document.getElementById('overlay');
         menuclick.addEventListener('click',() =>{
             const navsmcont=document.getElementsByClassName('nav-small-cont')[0];
+            navlinks=navsmcont.children;
              if(navsmcont.className==='nav-small-cont' || navsmcont.className==='nav-small-cont nav-small-cont-mb' )
              {  if(document.documentElement.clientWidth<='375')
                 {
@@ -934,6 +939,10 @@
                     navsmcont.className="nav-small-cont";
                     navsmcont.style.width='40%';
                 }
+                for (let i = 0; i < navlinks.length; i++) {
+                      navlinks[i].classList.add("displaymod");
+                }
+                
                // navbar.className="w3-hide";
                 navbar.style.opacity='0';
                 navbar.style.height='0'
@@ -948,6 +957,10 @@
              else if(navsmcont.className==='nav-small-cont close' || navsmcont.className==='nav-small-cont nav-small-cont-mb close')
              {
                 navsmcont.style.width='0%';
+                for (let i = 0; i < navlinks.length; i++)
+                {
+                    navlinks[i].className="navitem-small";
+                }
                 //navbar.className="w3-show";
                 navbar.style.opacity='1';
                 navbar.style.height='auto';

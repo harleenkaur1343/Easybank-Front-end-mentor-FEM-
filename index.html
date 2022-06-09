@@ -158,21 +158,13 @@
         margin:35px 0 0 0 ;
     }
     div#header-side-img{
-        position:relative;
-        height:650px;
-        width:55%;
-        overflow-x:hidden;
-    }
-    picture>source.header-imgbg, img.header-imbg{
-        position:absolute;
-        top:-17em;
-        left:-3em;
-        z-index:-4;
-        overflow: hidden;
-    }
-    picture>source.header-imbg-mobile{
-        width:100%;
-        position:relative;
+        position: relative;
+        height: 650px;
+        width: 55%;
+        background-image: url(images/bg-intro-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: 170%;
+        background-position: 0px -250px;
     }
     div>#header-imgphones{
         position:absolute;
@@ -182,6 +174,7 @@
         width:100%;
         height:auto;
         clip:rect(0px, 90%, 100%, 0px);
+        object-fit: cover;
     }
     /*Main content section*/ 
     main{
@@ -368,6 +361,9 @@
         .flex-cont-header>#header-cont{
             padding: 150px 70px 0px 165px;
         }
+        div#header-side-img{
+            background-position: 0px -275px;
+        }
         .div>#header-imgphones{
         position:absolute;
         clip:rect(0px, 6px, 100%, 0px);
@@ -398,6 +394,10 @@
         .flex-cont-header>#header-cont{
            padding:100px 10px 0px 100px;
         } 
+        div#header-side-img{
+            background-size: 170%;
+            background-position: 0px -220px;
+        }
         nav{
             padding:20px 100px;
         }
@@ -445,18 +445,18 @@
                 text-align: center;
                 margin:35px auto 0px auto;
         }
+        .flex-item{
+            width:100%;
+        }
         div#header-side-img{
             width: 100%;
             overflow: clip;
             height: 700px;
+            background-size: 165%;
+            background-position: -220px -300px;
         }
-        picture>source.header-imgbg, img.header-imbg{
-            position: absolute;
-            top: -25em;
-            left: -180px;
-            width: 1480px !important;
-        }
-        div>#header-imgphones{
+
+        /*div>#header-imgphones{
             top: -13em;
             z-index: 1;
             max-width: 75vw;
@@ -468,7 +468,7 @@
             margin-right: auto;
             left: 0;
             right: 0;
-        }
+        }*/
         /*Why easybank*/
         .whyeasybank-cont, .whyeasybank-cont>p{
             text-align:center;
@@ -529,18 +529,19 @@
         section{
             padding:75px 50px;
         }
-        picture>source.header-imgbg, img.header-imbg{
-            left: -170px;
-            width: 1300px !important;
+        div#header-side-img{
+            height: 87vw;
+            background-size: 175%;
+            background-position: -165px -230px
         }
-        div>#header-imgphones{
+        /*div>#header-imgphones{
             top: -13em;
             z-index: 1;
             max-width: 95vw;
             min-width: 630px;
-        }
+        }*/
         .flex-cont-header>#header-cont {
-            padding: 15px 75px 75px 75px;
+            padding: 75px 75px 75px 75px;
         }
         .latestposts-item>img{
             height:40%;
@@ -599,7 +600,11 @@
             font-size:40px
         }
         div#header-side-img{
-            height:88vw;
+            width: 100%;
+            overflow: clip;
+            height: 87vw;
+            background-size: 175%;
+            background-position: -150px -200px;
         }
         img.header-imbg{
             position: absolute;
@@ -790,12 +795,7 @@
                     <div class="req-invite headercta">Request Invite</div>
             </div>
             <div class="flex-item" id="header-side-img">
-                <picture>
-                    <!--<source media="(min-width:650px)" srcset="images/bg-intro-desktop.svg" class="header-imbg">
-                    <source media="(max-width:375px)" srcset="" class="header-imbg-mobile">-->
-                    <img src="images/bg-intro-desktop.svg" alt="bgphones-large" style="width:auto;" class="header-imbg">
-                </picture>
-                <img src="images/image-mockups.png" id="header-imgphones" alt="phones">
+                <img src="images/image-mockups.png" id="header-imgphones" alt="phones">-->
             </div>
         </div>
     </header>
